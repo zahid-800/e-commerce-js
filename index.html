@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecoomerce web-site</title>
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- boostraps start -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+
+    <!-- header area -->
+    <header>
+        <div class="container-fluid header-bg pt-1">
+            <!-- mobile_show -->
+            <div class="top_header_mobile">
+                <ul id="sidebar">
+                    <li onclick=hideSidebar()><a href="#"><img src="./img/icons8-multiply-26.png" alt="" width="22"></a>
+                    </li>
+                    <li onclick="logInform()" class="nav-item"><a href="#" class="nav-link">LOGIN <i
+                                class="fa-solid fa-angle-down"></i></a>
+                        <form action="form.php" id="frmlogin">
+                            <a href=""><img src="./img/icons8-multiply-26.png" alt="" width="22"></a>
+                            <input class="form-control mt-4" type="email" name="email" id="eml" placeholder="E-mail">
+                            <input class="form-control mt-3" type="password" name="email" id="pswd"
+                                placeholder="Password">
+                            <div class="d-grid gap-3">
+                                <button type="button" class="btn btn-light mt-3">Log-in</button>
+                            </div>
+
+                        </form>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">REGISTER</a></li>
+                    <li class="nav-item "><a href="#" class="nav-link"><i class="fa-solid fa-heart"></i></a></li>
+                    <li class="nav-item "><a href="#" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <div class="top_header">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a href="#" class="nav-link"><img class="brand"
+                                src="./img/ddl.avif" alt="" width="60"></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </li>
+                    <li class="nav-item "><a href="#" class="nav-link">USD $ <i class="fa-solid fa-angle-down"></i></a>
+                        <ul>
+                            <li><a href="#">EURO $</a></li>
+                            <li><a href="#">BDT $</a></li>
+                            <li><a href="#">CAD $</a></li>
+                        </ul>
+                    </li>
+                    <li onclick="logInformmain()" class="nav-item mobile_none"><a href="#" class="nav-link">LOGIN <i
+                                class="fa-solid fa-angle-down"></i></a>
+                        <form action="form.php" id="frmloginmain">
+                            <a href=""><img onclick="logInmain()" src="./img/icons85-multiply-26 .png" alt=""
+                                    width="22"></a>
+                            <input class="form-control mt-4" type="email" name="email" id="eml" placeholder="E-mail">
+                            <input class="form-control mt-3" type="password" name="email" id="pswd"
+                                placeholder="Password">
+                            <div class="d-grid gap-3">
+                                <button type="button" class="btn btn-light mt-3">Log-in</button>
+                            </div>
+
+                        </form>
+                    </li>
+                    <li class="nav-item mobile_none"><a href="#" class="nav-link">REGISTER</a></li>
+                    <li class="nav-item mobile_none"><a href="#" class="nav-link"><i class="fa-solid fa-heart"></i></a>
+                    </li>
+                    <li class="nav-item mobile_none"><a href="#" class="nav-link"><i
+                                class="fa-solid fa-cart-shopping"></i></a></li>
+                    <img class="menu-squared" onclick=showSidebar() src="./img/icons8-menu-squared-50.png" alt=""
+                        width="36">
+                </ul>
+            </div>
+
+
+            <div class="second_header header  pt-3" id="myHeader">
+                <ul class="nav">
+                    <i onclick=showMain() class="fa-solid fa-bars"></i>
+                    <li class="nav-item mobile_none"><a href="" class="nav-link">HOME</a></li>
+                    <li class="nav-item mobile_none"><a href="" class="nav-link">ALL COLLECTIONS <i
+                                class="fa-solid fa-angle-down"></i></a></li>
+                    <li class="nav-item mobile_none"><a href="" class="nav-link">SHOP LAYOUT <i
+                                class="fa-solid fa-angle-down"></i></a></li>
+                    <li class="nav-item   mobile_none"><a href="" class="nav-link">PAGES <i
+                                class="fa-solid fa-angle-down"></i> </a>
+                    </li>
+                    <li class="nav-item mobile_none"><a href="" class="nav-link">BLOGS <i
+                                class="fa-solid fa-angle-down"></i></a>
+                    </li>
+                    <li class="nav-item mobile_none"><a href="" class="nav-link">CONTACT US <i
+                                class="fa-solid fa-angle-down"></i></a></li>
+            </div>
+            <!-- 2nd nav mobile show -->
+            <div class="main_nav ">
+                <ul id="mainnav">
+                    <i onclick=hidemain() class="fa-solid fa-xmark"></i>
+                    <li class="nav-item"><a class="nav-link" href="">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">ALL COLLECTIONS <i
+                                class="fa-solid fa-angle-down"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="">SHOP LAYOUT <i
+                                class="fa-solid fa-angle-down"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="">PAGES <i class="fa-solid fa-angle-down"></i> </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="">BLOGS <i class="fa-solid fa-angle-down"></i></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="">CONTACT US <i
+                                class="fa-solid fa-angle-down"></i></a></li>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- main area -->
+
+    <section>
+        <div class="container mt-3">
+            <div class="hero_slide">
+                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+                    </div>
+
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/sidebar3.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+                            <div class="carousel-caption">
+                                <h3>Los Angeles</h3>
+                                <p>We had such a great time in LA!</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/chicago.jpg" alt="Chicago" class="d-block" style="width:100%">
+                            <div class="carousel-caption">
+                                <h3>Chicago</h3>
+                                <p>Thank you, Chicago!</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/sidebar2.jpg" alt="New York" class="d-block" style="width:100%">
+                            <div class="carousel-caption">
+                                <h3>New York</h3>
+                                <p>We love the Big Apple!</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/sidebar4.jpg" alt="New York" class="d-block" style="width:100%">
+                            <div class="carousel-caption">
+                                <h3>New York</h3>
+                                <p>We love the Big Apple!</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/sidebar5.jpg" alt="New York" class="d-block" style="width:100%">
+                            <div class="carousel-caption">
+                                <h3>New York</h3>
+                                <p>We love the Big Apple!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- hero area sliade -->
+
+    <section>
+        <div class="container mt-5 pt-4">
+            <div class="condition">
+                <div class="row g-4 condition-responsive">
+                    <div class="col-md-4 condition-responsive2">
+                        <div class="return">
+                            <h1>RETURN & EXCHANGE</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 condition-responsive2">
+                        <div class="shipping">
+                            <h1>RETURN & EXCHANGE</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 condition-responsive2">
+                        <div class="member_discount">
+                            <h1>RETURN & EXCHANGE</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- condition page -->
+
+
+    <section>
+        <div class="container mt-4 pt-4 pb-5">
+            <div class="what_new_heading">
+                <h1>WHAT'S NEW</h1>
+                <div class="row g-4">
+                    <div class="col-md-6 show_btn_collection">
+                        <div class="btn-group ">
+                            <button type="button" class="btn btn-dark-light categoris1">Bag's</button>
+                            <button type="button" class="btn btn-dark-light categoris1">Bags & Purses</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 show_btn_collection">
+                        <div class="btn-group ">
+                            <button type="button" class="btn btn-dark-light categoris1">Lifestyles</button>
+                            <button type="button" class="btn btn-dark-light categoris1">Holdeals</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product_collection_new mt-5">
+                    <div class="row g-4 what_new_collection_respossive">
+                        <div class="col-md-3 show_btn_collection">
+                            <div  onmouseenter="newbtnOpen()" class="new_product_card">
+                                <a href="##"> <div class="new_col-product_img"><img id="productnewchange" src="./img/wnb-1.webp" alt=""></div>
+                                    <div class="add_card pt-2">
+                                        <div class="d-grid">
+                                            <button id="addcart" type="button" class="btn product_card_btn"> ADD TO CART</button>
+                                        </div>
+                                    </div>
+                                    <div class="product_card_headding">
+                                        <div class="collection_num pt-3">
+                                            <p>3 color</p>
+                                            <span><img onclick="newColectionproductchange()" src="./img/wnbsub-1.webp" alt="">
+                                                <img onclick="newColectionproductchanges()"  src="./img/wnbsub-2.webp" alt="">
+                                                <img onclick="newColectionproductchanget()"  src="./img/wnbsub-3.webp" alt="">
+                                            </span>
+                                        </div>
+                                        <h3>2023 Fashion Handbag Stone Pattern Handbag Korean Style Handbag Winter
+                                            Fashion Handbag</h3>
+                                        <div class="price">
+                                            <span>$ 3</span>
+                                            <p><del>$4</del> -36%</p>
+                                            <div class="review">
+                                                <i class="fa-regular fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+                             <!-- card-2 -->
+                             <div class="col-md-3 show_btn_collection">
+                                <div  onmouseenter="newbtnOpens()" class="new_product_card">
+                                    <a href="##"> <div class="new_col-product_img"><img id="productnewchangeb" src="./img/wnb-2.webp" alt=""></div>
+                                        <div class="add_card pt-2">
+                                            <div class="d-grid">
+                                                <button id="addcart1" type="button" class="btn product_card_btn"> ADD TO CART</button>
+                                            </div>
+                                        </div>
+                                        <div class="product_card_headding">
+                                            <div class="collection_num pt-3">
+                                                <p>3 color</p>
+                                                <span><img onclick="newColectionproductchangeb()" src="./img/wnbsub-2-1.webp" alt="">
+                                                    <img onclick="newColectionproductchangesbb()"  src="./img/wnbsub-2-2.webp" alt="">
+                                                    <img onclick="newColectionproductchangesbbb()"  src="./img/wnbsub-2-3.webp" alt="">
+                                                </span>
+                                            </div>
+                                            <h3>2023 Fashion Handbag Stone Pattern Handbag Korean Style Handbag Winter
+                                                Fashion Handbag</h3>
+                                            <div class="price">
+                                                <span>$ 3</span>
+                                                <p><del>$4</del> -36%</p>
+                                                <div class="review">
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                </div>
+                            </div>
+                             <!-- card-3 -->
+                             <div class="col-md-3 show_btn_collection">
+                                <div  onmouseenter="newbtnOpenss()" class="new_product_card">
+                                    <a href="##"> <div class="new_col-product_img"><img id="productnewchangethird" src="./img/wnb-3.webp" alt=""></div>
+                                        <div class="add_card pt-2">
+                                            <div class="d-grid">
+                                                <button id="addcart2" type="button" class="btn product_card_btn"> ADD TO CART</button>
+                                            </div>
+                                        </div>
+                                        <div class="product_card_headding">
+                                            <div class="collection_num pt-3">
+                                                <p>3 color</p>
+                                                <span><img onclick="newColectionproductchangethird()" src="./img/wnbsub-3-1.webp" alt="">
+                                                    <img onclick="newColectionproductchangethirdd()"  src="./img/wnbsub-3-2.webp" alt="">
+                                                    <img onclick="newColectionproductchangethirddd()"  src="./img/wnbsub-3-3.webp" alt="">
+                                                </span>
+                                            </div>
+                                            <h3>2023 Fashion Handbag Stone Pattern Handbag Korean Style Handbag Winter
+                                                Fashion Handbag</h3>
+                                            <div class="price">
+                                                <span>$ 3</span>
+                                                <p><del>$4</del> -36%</p>
+                                                <div class="review">
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                </div>
+                            </div>
+                             <!-- card-4 -->
+                             <div class="col-md-3 show_btn_collection">
+                                <div  onmouseenter="newbtnOpensss()" class="new_product_card">
+                                    <a href="##"> <div class="new_col-product_img"><img id="productnewchangefour" src="./img/wnb-4.webp" alt=""></div>
+                                        <div class="add_card pt-2">
+                                            <div class="d-grid">
+                                                <button id="addcart3" type="button" class="btn product_card_btn"> ADD TO CART</button>
+                                            </div>
+                                        </div>
+                                        <div class="product_card_headding">
+                                            <div class="collection_num pt-3">
+                                                <p>3 color</p>
+                                                <span><img onclick="newColectionproductchangefour()" src="./img/wnbsub-4-1.webp" alt="">
+                                                    <img onclick="newColectionproductchangefourr()"  src="./img/wnbsub-4-2.webp" alt="">
+                                                    <img onclick="newColectionproductchangefourrr()"  src="./img/wnbsub-4-3.webp" alt="">
+                                                </span>
+                                            </div>
+                                            <h3>2023 Fashion Handbag Stone Pattern Handbag Korean Style Handbag Winter
+                                                Fashion Handbag</h3>
+                                            <div class="price">
+                                                <span>$ 3</span>
+                                                <p><del>$4</del> -36%</p>
+                                                <div class="review">
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+    
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- what's new arrivals page -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer area -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./mainjs/main.js"></script>
+</body>
+
+</html>
