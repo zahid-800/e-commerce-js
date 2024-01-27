@@ -390,12 +390,16 @@ body {
 }
 
 .product_card_btn {
-    background-color: transparent;
+     background-color: #fff;
     border: 1px solid black;
     border-radius: 0%;
     display: none;
+    transition: 0.2s ease-in;
+      margin-top: -3em;
 }
-
+.product_card_btn:hover {
+    background-color: #fff;
+}
 .collection_num {
     display: flex;
     justify-content: flex-start;
@@ -551,7 +555,7 @@ body {
         font-size: 8px;
     }
 }
-@media(max-width:400px) {
+@media(max-width:300px) {
     .what_new_collection_respossive {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
