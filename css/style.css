@@ -534,12 +534,12 @@ body {
     }
 
     .new_product_card {
-        width: 200px;   
+        width: 170px;   
     }
 
     .new_product_card img {
-        width: 200px;
-        height: 180px;
+        width: 170px;
+        height: 140px;
     }
     .show_btn_collection{
         display: flex;
